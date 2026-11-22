@@ -145,6 +145,31 @@ header.sticky {
   position: sticky;
   top: 0;
   z-index: 50;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Prevent global button/rounded hover translate and heavy shadow from breaking header nav */
+header nav a,
+header nav a:hover,
+header nav a:active {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+header button[aria-label="Toggle menu"],
+header button[aria-label="Toggle menu"]:hover,
+header button[aria-label="Toggle menu"]:active {
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+header a.site-logo,
+header a.site-logo:hover,
+header a.site-logo:active {
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 .split-section {
